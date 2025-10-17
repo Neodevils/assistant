@@ -1,0 +1,20 @@
+{
+	"name": "assistant",
+	"version": "1.0.0",
+	"description": "A Discord assistant application",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"discord",
+		"assistant",
+		"application"
+	],
+	"author": "Neodevils",
+	"license": "ISC",
+	"type": "module",
+	"dependencies": {
+		"discord-interactions": "^4.4.0"
+	}
+}
