@@ -1,9 +1,9 @@
 import {
 	ActionRowBuilder,
 	MessageCommandBuilder,
+	type MessageContextMenuInteraction,
 	StringSelectMenuBuilder,
 	StringSelectMenuOptionBuilder,
-	type CommandInteraction,
 	type MiniComponentMessageActionRow,
 	type MiniInteractionCommand,
 } from "@minesa-org/mini-interaction";
@@ -11,7 +11,7 @@ import {
 const menu_command: MiniInteractionCommand = {
 	data: new MessageCommandBuilder().setName("Menu").toJSON(),
 
-	handler: (interaction: CommandInteraction) => {
+	handler: (interaction: MessageContextMenuInteraction) => {
 		const menu = new ActionRowBuilder<MiniComponentMessageActionRow>()
 			.addComponents(
 				new StringSelectMenuBuilder()
@@ -33,8 +33,10 @@ const menu_command: MiniInteractionCommand = {
 			)
 			.toJSON();
 
+		const message = interaction.targetMessage?.content;
+
 		return interaction.reply({
-			content: "Select something!",
+			content: "Select something! " + message,
 			components: [menu],
 		});
 	},

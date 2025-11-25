@@ -1,4 +1,5 @@
 import { MiniInteraction } from "@minesa-org/mini-interaction";
+import "dotenv/config";
 
 const mini = new MiniInteraction({
 	applicationId: process.env.DISCORD_APPLICATION_ID!,

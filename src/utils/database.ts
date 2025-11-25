@@ -1,4 +1,5 @@
 import { MiniDatabase } from "@minesa-org/mini-interaction";
+import "dotenv/config";
 
 /**
  * Shared database instance for the application.
