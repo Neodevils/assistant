@@ -3,8 +3,8 @@ import {
 	type MiniInteractionComponent,
 } from "@minesa-org/mini-interaction";
 
-const ping_button: MiniInteractionComponent = {
-	customId: "button:btn:primary",
+const button: MiniInteractionComponent = {
+	customId: "translate:button",
 
 	handler: async (interaction: ButtonInteraction) => {
 		const response = "Button clicked!";
@@ -15,4 +15,4 @@ const ping_button: MiniInteractionComponent = {
 	},
 };
 
-export default ping_button;
+export default button;
